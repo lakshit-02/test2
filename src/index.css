@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* ─── Reset global styles jo components override kar rahi thi ──────────────── */
+
+:root {
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/1.5 var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+/* #root ko full width, no centering, no forced colors */
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  /* text-align NAHI – components apna alignment khud define karte hain */
+}
+
+/* h1, h2 ka forced color hataya – components inline style use karte hain */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--sans);
+  margin: 0;
+  /* color intentionally nahi diya – component level pe control hoga */
+}
+
+p {
+  margin: 0;
+}
